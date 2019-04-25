@@ -1,0 +1,213 @@
+/* .container {
+    width: 871px;
+    height: 1006px;
+    border: 1px solid #000;
+}
+
+.sidebar {
+    background-color: #F3F3F3;
+    width: 260px;
+    height: 100%;
+    padding: 0;
+   
+}
+
+.previewer {
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 611px;
+    padding: 0;
+    
+  
+}
+
+.title {
+    padding: 10px;
+    width: 100%;
+}
+
+.title-text {
+    width: 50%;
+    float: left;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #394166;
+}
+
+.upload-icon {
+    color: #9CA0B2;
+    font-size: 13px;
+    margin-left: 40%;
+}
+
+.file-text {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #394166;
+}
+
+.document-header {
+    background: #4077E4;
+    line-height: unset;
+    color: #fff;
+} */
+
+
+
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    height: 100%;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    /* width: 871px;
+    height: 1006px;
+    align-items: stretch; */
+    display: flex;
+    width: 871px;
+    margin: 0 auto;
+    height: 1006px;
+    background-color: #FFFFFF;
+}
+
+#sidebar {
+    /* min-width: 250px;
+    max-width: 250px;
+    background: #7386D5;
+    color: #fff; */
+
+    background-color: #F3F3F3;
+    width: 260px;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 10px;
+    background: #F3F3F3;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li.active>a {
+    color: #394166;
+    background: #fff;
+    border: 1px solid #E8EAEF;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 6px rgba(57, 65, 102, 0.05);
+    border-radius: 2px;
+    border-left: 2px solid #4077E4;
+}
+
+#sidebar .upload-text {
+    color: #9CA0B2;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#sidebar .file-text {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #394166;
+    /* cursor: pointer;
+    margin: 0; */
+}
+
+#sidebar .file-title {
+    height: 50px;
+}
+
+#sidebar .name {
+    color: #394166;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#sidebar .user {
+    color: #394166;
+    font-size: 12px;
+}
+
+#sidebar .fileControl {
+    display: none;
+}
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 611px;
+    padding: 0;
+    background: #FFFFFF;
+    border: 1px solid #E8EAEF;
+    box-shadow: 0px 8px 16px rgba(57, 65, 102, 0.22);
+    display: flex;
+    flex-flow: column;
+    /* width: 100%; */
+    /* padding: 20px; */
+    /* min-height: 100vh; */
+    /* transition: all 0.3s; */
+}
+
+#content .document-header {
+    background: #4077E4;
+    color: #fff;
+    padding: 10px;
+}
+ 
+#content .file-viewer {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+#content .file-viewer iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+} 
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
